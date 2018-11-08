@@ -9,6 +9,8 @@ public class CombNumbers
 {
     public void combNumbers() throws IOException
     {
+        System.out.println("Введите последовательность из трех цифр:");
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] str = reader.readLine().split(" ");
 

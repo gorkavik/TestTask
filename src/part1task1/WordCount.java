@@ -10,6 +10,8 @@ public class WordCount
 
     public void wordCountAndSort() throws IOException
     {
+        System.out.println("Введите предложение:");
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] split = reader.readLine().split(",| ");
 

@@ -8,15 +8,13 @@ public class MainClass
 {
     public static void main(String[] args) throws IOException
     {
-        System.out.println("Введите предложение:");
+
         WordCount count = new WordCount();
         count.wordCountAndSort();
 
-        System.out.println("Введите последовательность целых чисел:");
         EvenNumbers numb = new EvenNumbers();
         numb.evenNumbers();
 
-        System.out.println("Введите последовательность из трех цифр:");
         CombNumbers comb = new CombNumbers();
         comb.combNumbers();
 

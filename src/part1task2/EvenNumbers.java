@@ -9,6 +9,8 @@ public class EvenNumbers
 {
     public void evenNumbers() throws IOException
     {
+        System.out.println("Введите последовательность целых чисел:");
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String[] split = reader.readLine().split(" ");
 
