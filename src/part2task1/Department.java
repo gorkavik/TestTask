@@ -1,14 +1,11 @@
 package part2task1;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class Department
 {
     private String depName;
-    private Map<Integer, String> employeeMap = new HashMap<>();
-    Integer index = 1;
+    private ArrayList<Employee> employeeMap = new ArrayList<>();
 
     private class Employee
     {
@@ -30,21 +27,20 @@ public class Department
     public void addEmplyee(String fullName, String position)
     {
         Employee employee = new Employee(fullName, position);
-        this.employeeMap.put(index, employee.toString());
-        index++;
+        this.employeeMap.add(employee);
+
     }
 
-
-    public String getEmployee()
+    public String getEmployees()
     {
-        String[] str = new String[employeeMap.size()];
-        int index = 1;
+        String str = "";
+
         for (int i = 0; i < employeeMap.size(); i++)
         {
-            str[i] = employeeMap.get(index);
-            index++;
+            str = str + " " + employeeMap.get(i).toString();
+
         }
-        return Arrays.toString(str);
+        return str;
     }
 
     public String getDepName()

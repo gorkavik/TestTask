@@ -1,12 +1,11 @@
 package part2task3;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Cinema
 {
     private String cinemaName, adress;
-    ArrayList<String> cinema = new ArrayList<>();
+    private ArrayList<String> cinema = new ArrayList<>();
 
     public Cinema(String cinemaName, String adress)
     {
@@ -19,7 +18,7 @@ public class Cinema
         String nameFilm;
         int hours, minutes;
 
-        public Film(String nameFilm, int hours, int minutes)
+        Film(String nameFilm, int hours, int minutes)
         {
             this.nameFilm = nameFilm;
             this.hours = hours;
@@ -56,12 +55,12 @@ public class Cinema
 
     public String getFilms()
     {
-        String[] str = new String[cinema.size()];
+        String str = "";
         for (int i = 0; i < cinema.size(); i++)
         {
-            str[i] = cinema.get(i);
+            str = str + " " + cinema.get(i);
         }
-        return Arrays.toString(str);
+        return str;
     }
 
     public void setCinemaName(String cinemaName)

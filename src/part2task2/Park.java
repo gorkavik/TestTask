@@ -1,7 +1,6 @@
 package part2task2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Park
 {
@@ -31,12 +30,12 @@ public class Park
 
     public String getAttraction()
     {
-        String[] str = new String[arrayAttractions.size()];
+        String str = "";
         for (int i = 0; i < arrayAttractions.size(); i++)
         {
-            str[i] = arrayAttractions.get(i).toString();
+            str = str + " " + arrayAttractions.get(i).toString();
         }
-        return Arrays.toString(str);
+        return str;
     }
 
     public void addAttraction(String name, int hour, int minutes, double cost)
